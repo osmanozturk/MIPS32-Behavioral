@@ -1,8 +1,7 @@
 # MIPS32-Behavioral
 MIPS Architecture based fully functional 32 bits CPU design in behavioral verilog
 
-Organisation HW4 Report
-I have designed all of my circuits using Logisim since I am bad at drawing. I have represented 32 bit inputs as 1 bit input sometimes for more clear view they are actually designed to operate with 32 data bits. And I have used splitter wire in reverse for transferring 32 bits from one wire. 
+I have designed all of my circuits using Logisim. I have represented 32 bit inputs as 1 bit input sometimes for more clear view they are actually designed to operate with 32 data bits. And I have used splitter wire in reverse for transferring 32 bits from one wire. 
 We are using 32 bits for addressing in mips  but I have implemented data memory and instruction memory with 256 lines with each containing 32 bits. So  not all of the address input serves a purpose. Since I have read 32 bits at a time my program counter increases by 1 in each cycle rather than 4.
 .mem files  come within quartus qar file inside of the workspace folder since quartus uses that folder. registers.mem instructions.mem program_counter.mem and data.mem must be placed inside of the simulation/modelsim folder before simulating in modelsim. I have added them to the folder seperately too. 
 I have changed my alu to generate zero flag and take aluop1 and aluop0 as inputs which comes from the real control unit.
@@ -38,4 +37,3 @@ Control unit creates the necessary outputs for muxes and memory elements in the 
 Output: 
 ![Test Output](media/image9.png)
 It shows X’s for don’t care situations. Other values doesn’t matter if jump is performed for example. Clock doesn’t stop by itself in test bench. Simulation break should be used.
-Osman Öztürk
