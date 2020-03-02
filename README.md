@@ -6,9 +6,13 @@ We are using 32 bits for addressing in mips  but I have implemented data memory 
 .mem files  come within quartus qar file inside of the workspace folder since quartus uses that folder. registers.mem instructions.mem program_counter.mem and data.mem must be placed inside of the simulation/modelsim folder before simulating in modelsim. I have added them to the folder seperately too. 
 I have changed my alu to generate zero flag and take aluop1 and aluop0 as inputs which comes from the real control unit.
 I have designed two 16 to 32 bit extenders (zero extender and sign extender) for supporting I type instructions, I have also designed two to one muxes with different bit lengths but they are the same as usual. All other modules’ designs are the same with previous version.
+
+
 Designs:
-![Zero and Signed Bit Extenders](media/image1.png) ![Zero and Signed Bit Extenders](media/image2.png)
-   
+
+![Zero and Signed Bit Extenders](media/image1.png)  ![Zero and Signed Bit Extenders](media/image2.png)
+
+
 Zero and Signed Bit Extenders
 Mips registers, next_pc, instruction memory and data memory modules are designed using behavioral Verilog since they contain memory. But I have designed mips registers and next_pc modules’ interior in Logisim too for a brief understanding in structure. Register module is designed as a single block of registers in original but I have showed them with three different memory modules in Logisim. They are not actually designed like that. 
 
